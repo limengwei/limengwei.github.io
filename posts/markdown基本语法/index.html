@@ -85,7 +85,7 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 <meta itemprop="datePublished" content="2018-05-28T15:33:03&#43;08:00" />
 <meta itemprop="dateModified" content="2018-05-28T15:33:03&#43;08:00" />
-<meta itemprop="wordCount" content="342">
+<meta itemprop="wordCount" content="119">
 
 
 
@@ -258,133 +258,19 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 <p><img src="http://res.zdm100.com/ad/12345.jpg" alt="这是一个图片" /></p>
 
-<h1 id="cmd-markdown-高阶语法手册">Cmd Markdown 高阶语法手册</h1>
-
-<h3 id="1-内容目录">1. 内容目录</h3>
-
-<p>在段落中填写 <code>[TOC]</code> 以显示全文内容的目录结构。</p>
-
-<p>[TOC]</p>
-
-<h3 id="2-删除线">2. 删除线</h3>
+<h3 id="10-删除线">10. 删除线</h3>
 
 <p>使用 ~~ 表示删除线。</p>
 
 <p><del>这是一段错误的文本。</del></p>
 
-<h3 id="3-注脚">3. 注脚</h3>
+<h3 id="11-注脚">11. 注脚</h3>
 
 <p>使用 [^keyword] 表示注脚。</p>
 
 <p>这是一个注脚<sup class="footnote-ref" id="fnref:footnote"><a href="#fn:footnote">1</a></sup>的样例。</p>
 
 <p>这是第二个注脚<sup class="footnote-ref" id="fnref:footnote2"><a href="#fn:footnote2">2</a></sup>的样例。</p>
-
-<h3 id="5-latex-公式">5. LaTeX 公式</h3>
-
-<p>$ 表示行内公式：</p>
-
-<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
-
-<p>$$ 表示整行公式：</p>
-
-<p>$$\sum_{i=1}^n a_i=0$$</p>
-
-<p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
-
-<p>$$\sum^{j-1}<em>{k=0}{\widehat{\gamma}</em>{kj} z_k}$$</p>
-
-<p>访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax</a> 参考更多使用方法。</p>
-
-<h3 id="6-加强的代码块">6. 加强的代码块</h3>
-
-<p>支持四十一种编程语言的语法高亮的显示，行号显示。</p>
-
-<p>非代码示例：</p>
-
-<pre><code>$ sudo apt-get install vim-gnome
-</code></pre>
-
-<p>Python 示例：</p>
-
-<pre><code class="language-python">@requires_authorization
-def somefunc(param1='', param2=0):
-    '''A docstring'''
-    if param1 &gt; param2: # interesting
-        print 'Greater'
-    return (param2 - param1 + 1) or None
-
-class SomeClass:
-    pass
-
-&gt;&gt;&gt; message = '''interpreter
-... prompt'''
-</code></pre>
-
-<p>JavaScript 示例：</p>
-
-<pre><code class="language-javascript">/**
-* nth element in the fibonacci series.
-* @param n &gt;= 0
-* @return the nth element, &gt;= 0.
-*/
-function fib(n) {
-  var a = 1, b = 1;
-  var tmp;
-  while (--n &gt;= 0) {
-    tmp = a;
-    a += b;
-    b = tmp;
-  }
-  return a;
-}
-
-document.write(fib(10));
-</code></pre>
-
-<h3 id="16-待办事宜-todo-列表">16. 待办事宜 Todo 列表</h3>
-
-<p>使用带有 [ ] 或 [x] （未完成或已完成）项的列表语法撰写一个待办事宜列表，并且支持子列表嵌套以及混用Markdown语法，例如：</p>
-
-<pre><code>- [ ] **Cmd Markdown 开发**
-    - [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率
-    - [ ] 支持以 PDF 格式导出文稿
-    - [x] 新增Todo列表功能 [语法参考](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments)
-    - [x] 改进 LaTex 功能
-        - [x] 修复 LaTex 公式渲染问题
-        - [x] 新增 LaTex 公式编号功能 [语法参考](http://docs.mathjax.org/en/latest/tex.html#tex-eq-numbers)
-- [ ] **七月旅行准备**
-    - [ ] 准备邮轮上需要携带的物品
-    - [ ] 浏览日本免税店的物品
-    - [x] 购买蓝宝石公主号七月一日的船票
-</code></pre>
-
-<p>对应显示如下待办事宜 Todo 列表：</p>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <strong>Cmd Markdown 开发</strong>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> 支持以 PDF 格式导出文稿</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 新增Todo列表功能 <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">语法参考</a></label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 改进 LaTex 功能
-
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 修复 LaTex 公式渲染问题</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 新增 LaTex 公式编号功能 <a href="http://docs.mathjax.org/en/latest/tex.html#tex-eq-numbers">语法参考</a></label></li>
-</ul></label></li>
-</ul></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <strong>七月旅行准备</strong>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> 准备邮轮上需要携带的物品</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> 浏览日本免税店的物品</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 购买蓝宝石公主号七月一日的船票
-<br />
-<br /></label></li>
-</ul></label></li>
-</ul>
 <div class="footnotes">
 
 <hr />
