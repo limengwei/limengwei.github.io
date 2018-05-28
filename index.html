@@ -38,7 +38,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-28T15:33:03&#43;08:00"/>
+<meta property="og:updated_time" content="2018-05-28T16:05:37&#43;08:00"/>
 
 
 
@@ -123,6 +123,37 @@
 
       <section class="w-100 mw8">
         
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/windows%E4%B8%8B%E4%B8%BAgo%E7%A8%8B%E5%BA%8F%E5%8A%A0%E5%85%A5%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90/" class="color-inherit dim link">
+            Windows下为go程序加入图标资源
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Windows下为go程序加入图标资源 1.准备图标资源如demo.ico，适用Windows的图标 2.新建rc文件，如demo.rc 内容如下 IDI_ICON1 ICON &quot;daily.ico&quot;
+3.使用windres编译demo.rc。（需预先安装TDM-GCC-64） windres -o daily.syso daily.rc
+64位环境下编译出32位的链接文件 需要额外参数
+windres --output-format=coff --target=pe-i386 -o daily.syso daily.rc
+4.使用go工具编译 go build
+或
+go build -ldflags=&quot;-H windowsgui&quot;
+5.如果是多平台开发，非Windows平台不需要rc资源，可以建立以下批处理 build.bat @echo offwindres -o daily.syso daily.rcgo builddel daily.syso
+        </div>
+          <a href="/posts/windows%E4%B8%8B%E4%B8%BAgo%E7%A8%8B%E5%BA%8F%E5%8A%A0%E5%85%A5%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
         
           <div class="relative w-100 mb4">
             

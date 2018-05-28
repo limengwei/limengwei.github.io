@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My Blog  | Windows下为go程序加入图标资源</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.41" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Windows下为go程序加入图标资源" />
+<meta property="og:description" content="Windows下为go程序加入图标资源 1.准备图标资源如demo.ico，适用Windows的图标 2.新建rc文件，如demo.rc 内容如下 IDI_ICON1 ICON &quot;daily.ico&quot;
+3.使用windres编译demo.rc。（需预先安装TDM-GCC-64） windres -o daily.syso daily.rc
+64位环境下编译出32位的链接文件 需要额外参数
+windres --output-format=coff --target=pe-i386 -o daily.syso daily.rc
+4.使用go工具编译 go build
+或
+go build -ldflags=&quot;-H windowsgui&quot;
+5.如果是多平台开发，非Windows平台不需要rc资源，可以建立以下批处理 build.bat @echo offwindres -o daily.syso daily.rcgo builddel daily.syso" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://limengwei.github.io/posts/windows%E4%B8%8B%E4%B8%BAgo%E7%A8%8B%E5%BA%8F%E5%8A%A0%E5%85%A5%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90/" />
+
+
+
+<meta property="article:published_time" content="2018-05-28T16:05:37&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-05-28T16:05:37&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Windows下为go程序加入图标资源">
+<meta itemprop="description" content="Windows下为go程序加入图标资源 1.准备图标资源如demo.ico，适用Windows的图标 2.新建rc文件，如demo.rc 内容如下 IDI_ICON1 ICON &quot;daily.ico&quot;
+3.使用windres编译demo.rc。（需预先安装TDM-GCC-64） windres -o daily.syso daily.rc
+64位环境下编译出32位的链接文件 需要额外参数
+windres --output-format=coff --target=pe-i386 -o daily.syso daily.rc
+4.使用go工具编译 go build
+或
+go build -ldflags=&quot;-H windowsgui&quot;
+5.如果是多平台开发，非Windows平台不需要rc资源，可以建立以下批处理 build.bat @echo offwindres -o daily.syso daily.rcgo builddel daily.syso">
+
+
+<meta itemprop="datePublished" content="2018-05-28T16:05:37&#43;08:00" />
+<meta itemprop="dateModified" content="2018-05-28T16:05:37&#43;08:00" />
+<meta itemprop="wordCount" content="37">
+
+
+
+<meta itemprop="keywords" content="go,交叉编译," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows下为go程序加入图标资源"/>
+<meta name="twitter:description" content="Windows下为go程序加入图标资源 1.准备图标资源如demo.ico，适用Windows的图标 2.新建rc文件，如demo.rc 内容如下 IDI_ICON1 ICON &quot;daily.ico&quot;
+3.使用windres编译demo.rc。（需预先安装TDM-GCC-64） windres -o daily.syso daily.rc
+64位环境下编译出32位的链接文件 需要额外参数
+windres --output-format=coff --target=pe-i386 -o daily.syso daily.rc
+4.使用go工具编译 go build
+或
+go build -ldflags=&quot;-H windowsgui&quot;
+5.如果是多平台开发，非Windows平台不需要rc资源，可以建立以下批处理 build.bat @echo offwindres -o daily.syso daily.rcgo builddel daily.syso"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://limengwei.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My Blog
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Windows下为go程序加入图标资源</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-05-28T16:05:37&#43;08:00">May 28, 2018</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="windows下为go程序加入图标资源">Windows下为go程序加入图标资源</h1>
+
+<h2 id="1-准备图标资源如demo-ico-适用windows的图标">1.准备图标资源如demo.ico，适用Windows的图标</h2>
+
+<h2 id="2-新建rc文件-如demo-rc-内容如下">2.新建rc文件，如demo.rc 内容如下</h2>
+
+<p><code>IDI_ICON1 ICON &quot;daily.ico&quot;</code></p>
+
+<h2 id="3-使用windres编译demo-rc-需预先安装tdm-gcc-64">3.使用windres编译demo.rc。（需预先安装TDM-GCC-64）</h2>
+
+<p><code>windres -o daily.syso daily.rc</code></p>
+
+<p>64位环境下编译出32位的链接文件 需要额外参数</p>
+
+<p><code>windres --output-format=coff --target=pe-i386 -o daily.syso daily.rc</code></p>
+
+<h2 id="4-使用go工具编译">4.使用go工具编译</h2>
+
+<p><code>go build</code></p>
+
+<p>或</p>
+
+<p><code>go build -ldflags=&quot;-H windowsgui&quot;</code></p>
+
+<h2 id="5-如果是多平台开发-非windows平台不需要rc资源-可以建立以下批处理-build-bat">5.如果是多平台开发，非Windows平台不需要rc资源，可以建立以下批处理 build.bat</h2>
+
+<p><code>@echo offwindres -o daily.syso daily.rcgo builddel daily.syso</code></p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/go" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">交叉编译</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://limengwei.github.io/" >
+    &copy; 2018 My Blog
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
