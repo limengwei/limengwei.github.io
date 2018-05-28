@@ -3,29 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://limengwei.github.io/posts/hello/</loc>
+    <loc>http://limengwei.github.io/posts/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2018-05-28T15:33:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://limengwei.github.io/posts/hello/</loc>
     <lastmod>2018-05-28T14:17:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://limengwei.github.io/categories/</loc>
+    <loc>http://limengwei.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limengwei.github.io/</loc>
-    <lastmod>2018-05-28T14:17:25+08:00</lastmod>
+    <loc>http://limengwei.github.io/</loc>
+    <lastmod>2018-05-28T15:33:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limengwei.github.io/posts/</loc>
-    <lastmod>2018-05-28T14:17:25+08:00</lastmod>
+    <loc>http://limengwei.github.io/posts/</loc>
+    <lastmod>2018-05-28T15:33:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limengwei.github.io/tags/</loc>
+    <loc>http://limengwei.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
